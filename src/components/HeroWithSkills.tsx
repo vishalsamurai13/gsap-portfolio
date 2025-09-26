@@ -1,24 +1,24 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
-import Link from "next/link"
-import { Send, MoveDown, MoveUp } from "lucide-react"
-import SkillSection from "@/components/skills"
-import SplitText from "./SplitText"
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
+import { Send, MoveDown, MoveUp } from "lucide-react";
+import SkillSection from "@/components/skills";
+import SplitText from "./ui/texts/SplitText";
 
 export default function HeroWithSkills() {
-  const [showSkills, setShowSkills] = useState(false)
-  const [showComponent, setShowComponent] = useState(false)
+  const [showSkills, setShowSkills] = useState(false);
+  const [showComponent, setShowComponent] = useState(false);
 
   // Show the component after 3 seconds
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowComponent(true)
-    }, 2500)
-    return () => clearTimeout(timer)
-  }, [])
+      setShowComponent(true);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <AnimatePresence>
@@ -54,7 +54,6 @@ export default function HeroWithSkills() {
 
                   {/* Text */}
                   <div className="text-center mt-6 lg:mt-4 space-y-4 px-2 lg:px-6">
-                    
                     <SplitText
                       text="Vishal Sharma"
                       className="text-4xl lg:text-6xl font-semibold tracking-[2px] text-green-300 items-center"
@@ -68,12 +67,21 @@ export default function HeroWithSkills() {
                       rootMargin="-100px"
                       textAlign="center"
                     />
-                    
+
                     <h2 className="text-sm lg:text-2xl font-semibold text-gray-500">
                       Adapting to technology, delivering with precision.
                     </h2>
                     <p className="text-md lg:text-lg lg:leading-[30px] font-normal mt-6 text-gray-400 lg:tracking-[1px]">
-                      Full-stack developer with hands-on experience building responsive and scalable web applications. Skilled in React.js, Next.js, TypeScript, Node.js, and MongoDB, with projects spanning real-time chat apps, collaborative platforms, and inventory management systems. Experienced in API integrations, UI/UX optimization, and delivering solutions in fast-paced environments through internships and startup projects. Passionate about coding, I continuously build projects to sharpen my skills and explore new technologies.
+                      Full-stack developer with hands-on experience building
+                      responsive and scalable web applications. Skilled in
+                      React.js, Next.js, TypeScript, Node.js, and MongoDB, with
+                      projects spanning real-time chat apps, collaborative
+                      platforms, and inventory management systems. Experienced
+                      in API integrations, UI/UX optimization, and delivering
+                      solutions in fast-paced environments through internships
+                      and startup projects. Passionate about coding, I
+                      continuously build projects to sharpen my skills and
+                      explore new technologies.
                     </p>
                   </div>
 
@@ -124,5 +132,5 @@ export default function HeroWithSkills() {
         </motion.div>
       )}
     </AnimatePresence>
-  )
+  );
 }

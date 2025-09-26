@@ -1,7 +1,7 @@
-import React from 'react';
-import SplitText from './SplitText';
+import React from "react";
+import SplitText from "./ui/texts/SplitText";
 
-export default function SkillSection(){
+export default function SkillSection() {
   const skillCategories = [
     {
       title: "Frontend",
@@ -13,7 +13,7 @@ export default function SkillSection(){
         { name: "Tailwind CSS", icon: "", color: "text-teal-400" },
         { name: "UI Libraries", icon: "", color: "text-teal-400" },
         { name: "WebGL / GSAP", icon: "", color: "text-teal-400" },
-      ]
+      ],
     },
     {
       title: "Backend",
@@ -22,35 +22,35 @@ export default function SkillSection(){
         { name: "Express.js", icon: "", color: "text-yellow-600" },
         { name: "Django", icon: "", color: "text-red-500" },
         { name: "REST APIs", icon: "", color: "text-yellow-500" },
-      ]
+      ],
     },
     {
       title: "Databases",
       skills: [
         { name: "MongoDB", icon: "", color: "text-green-500" },
         { name: "MySQL", icon: "", color: "text-blue-600" },
-        { name: "PostgreSQL", icon: "", color: "text-blue-400" }
-      ]
+        { name: "PostgreSQL", icon: "", color: "text-blue-400" },
+      ],
     },
     {
       title: "Languages",
       skills: [
         { name: "JavaScript", icon: "", color: "text-yellow-500" },
         { name: "TypeScript", icon: "", color: "text-blue-400" },
-        { name: "Python", icon: "", color: "text-blue-400" }
-      ]
+        { name: "Python", icon: "", color: "text-blue-400" },
+      ],
     },
     {
-        title: "Tools",
-        skills: [
-          { name: "Postman", icon: "", color: "text-yellow-500" },
-          { name: "Git", icon: "", color: "text-blue-400" },
-          { name: "Github", icon: "", color: "text-blue-400" },
-          { name: "Figma", icon: "", color: "text-blue-400" },
-          { name: "Docker", icon: "", color: "text-blue-400" },
-          { name: "VS Code", icon: "", color: "text-blue-400" },
-        ]
-      }
+      title: "Tools",
+      skills: [
+        { name: "Postman", icon: "", color: "text-yellow-500" },
+        { name: "Git", icon: "", color: "text-blue-400" },
+        { name: "Github", icon: "", color: "text-blue-400" },
+        { name: "Figma", icon: "", color: "text-blue-400" },
+        { name: "Docker", icon: "", color: "text-blue-400" },
+        { name: "VS Code", icon: "", color: "text-blue-400" },
+      ],
+    },
   ];
 
   return (
@@ -71,7 +71,9 @@ export default function SkillSection(){
             rootMargin="-100px"
             textAlign="center"
           />
-          <p className="text-sm lg:text-xl font-medium text-gray-500 mt-2">Technologies I work with to bring ideas to life</p>
+          <p className="text-sm lg:text-xl font-medium text-gray-500 mt-2">
+            Technologies I work with to bring ideas to life
+          </p>
         </div>
 
         {/* Skills Categories */}
@@ -86,7 +88,9 @@ export default function SkillSection(){
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></div>
                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full"></div>
                 </div>
-                <h2 className="text-base sm:text-lg md:text-xl font-semibold text-green-400">{category.title}</h2>
+                <h2 className="text-base sm:text-lg md:text-xl font-semibold text-green-400">
+                  {category.title}
+                </h2>
               </div>
 
               {/* Skills Grid */}
@@ -96,7 +100,9 @@ export default function SkillSection(){
                     key={skillIndex}
                     className="bg-gray-800/50 hover:bg-gray-700/70 backdrop-blur-sm rounded-lg px-2.5 sm:px-3 lg:px-4 py-1.5 sm:py-2 lg:py-2.5 flex items-center justify-center transition-all duration-300 hover:scale-105 cursor-pointer border border-gray-700/50 hover:border-green-400/50 flex-shrink-0 group min-w-0"
                   >
-                    <div className={`text-lg sm:text-xl lg:text-2xl ${skill.color} flex-shrink-0 mr-1.5 sm:mr-2 group-hover:scale-110 transition-transform duration-300`}>
+                    <div
+                      className={`text-lg sm:text-xl lg:text-2xl ${skill.color} flex-shrink-0 mr-1.5 sm:mr-2 group-hover:scale-110 transition-transform duration-300`}
+                    >
                       {skill.icon}
                     </div>
                     <span className="text-xs sm:text-sm font-medium text-gray-200 whitespace-nowrap group-hover:text-white transition-colors duration-300 truncate">
@@ -114,4 +120,4 @@ export default function SkillSection(){
       </div>
     </div>
   );
-};
+}

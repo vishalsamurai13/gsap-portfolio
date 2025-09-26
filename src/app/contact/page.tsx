@@ -1,14 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-'use client';
+"use client";
 
-import Form from '@/components/form'
-import React from 'react'
-import SplitText from '@/components/SplitText'
-import { Boxes } from '@/components/ui/shadcn-io/background-boxes';
-
+import Form from "@/components/form";
+import React from "react";
+import SplitText from "@/components/ui/texts/SplitText";
+import { Boxes } from "@/components/ui/shadcn-io/background-boxes";
 
 const Contact = () => {
-
   return (
     <div className="flex flex-col items-center justify-center h-screen px-6 bg-black overflow-hidden relative">
       <Boxes className="absolute inset-0 z-0" />
@@ -33,8 +31,7 @@ const Contact = () => {
 
       <Form />
     </div>
+  );
+};
 
-  )
-}
-
-export default Contact
+export default Contact;
